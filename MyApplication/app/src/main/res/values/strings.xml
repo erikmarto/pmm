@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MI APLICACIÓN</string>
+    <string name="liner">Layout Lineal</string>
+    <string name="table">Layout en Tabla</string>
+    <string name="relative">Layout Relativo</string>
+    <string name="check">Checks</string>
+    <string name="radio">RadioButton</string>
+    <string name="tipos">TiposButton</string>
+    <string name="strMessage"></string>
+</resources>

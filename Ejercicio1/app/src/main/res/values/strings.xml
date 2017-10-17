@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MI APLICACIÓN</string>
+    <string name="liner">Liner Layout</string>
+    <string name="table">Table Layout</string>
+    <string name="color">Colors Layout</string>
+    <string name="relative">Relative Layout</string>
+</resources>

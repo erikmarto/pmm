@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.erigom.ejercicio1.Pantalla2">
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/botonRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color 1"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:id="@+id/botonGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color 2"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <Button
+            android:id="@+id/botonBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color 3"
+            android:textColor="@android:color/holo_blue_dark" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/txtColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/botonClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear" />
+    </TableRow>
+
+
+</TableLayout>
