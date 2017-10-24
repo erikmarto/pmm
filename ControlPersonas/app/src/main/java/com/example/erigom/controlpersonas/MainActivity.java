@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Titular[] datos = new Titular[]{
-            new Titular("Símbolo 1 ", "Skin 1", R.drawable.servicio1),
-            new Titular("Símbolo 2 ", "Skin 2", R.drawable.servicio2),
-            new Titular("Símbolo 3 ", "Skin 3", R.drawable.servicio3)
+            new Titular("Datos ", " Icono1", R.drawable.servicio1),
+            new Titular("Servicios ", " Icono2", R.drawable.servicio2),
+            new Titular("Ayuda al Cliente ", " Icono3", R.drawable.servicio3)
     };
 
     @Override
