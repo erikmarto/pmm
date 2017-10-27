@@ -1,6 +1,7 @@
 package com.example.erigom.controlpersonas;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -31,13 +32,21 @@ public class MainActivity extends AppCompatActivity {
         ListView IstOpciones = (ListView) findViewById(R.id.LstOpciones);
         IstOpciones.setAdapter(adaptador);
 
-        IstOpciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*IstOpciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView arg0, View arg1, int position, long id) {
-                String mensaje = "Título: " + datos[position].getTitulo() + ". Subtitulo: " + datos[position].getSubtitulo();
-                Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
+
             }
 
             public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });*/
+
+        IstOpciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView arg0, View arg1, int position, long id) {
+
+                Intent miIntent1 = new Intent(MainActivity.this, Pantalla2.class);
+                startActivity(miIntent1);
             }
         });
     }
