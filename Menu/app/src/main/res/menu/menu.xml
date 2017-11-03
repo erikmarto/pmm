@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/MnuOpc1" android:title="Inicio" />
-    <item android:id="@+id/MnuOpc2" android:title="Desarrollo" />
-    <item android:id="@+id/MnuOpc3" android:title="Interfaz">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/MnuOpc1"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/MnuOpc2"
+        android:title="Desarrollo" />
+    <item
+        android:id="@+id/MnuOpc3"
+        android:title="Interfaz">
         <menu>
-            <item android:id="@+id/SubMnuOpc1"
-                android:title="Cuadrado" />
-            <item android:id="@+id/SubMnuOpc2"
+            <item
+                android:id="@+id/SubMnuOpc1"
                 android:title="Circulo" />
-            <item android:id="@+id/SubMnuOpc3"
+            <item
+                android:id="@+id/SubMnuOpc2"
+                android:title="Cuadrado" />
+            <item
+                android:id="@+id/SubMnuOpc3"
                 android:title="Triangulo" />
         </menu>
     </item>

@@ -10,7 +10,7 @@ public class Pantalla01 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla01);
-        TextView lblMensaje =(TextView) findViewById(R.id.lblMensaje);
-        lblMensaje.setText ("CIRCULO!");
+        TextView lblMensaje = (TextView) findViewById(R.id.lblMensaje);
+        lblMensaje.setText("CIRCULO!");
     }
 }
