@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/erigom/pmm/FigurasAleatorios/app/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/erigom/pmm/FigurasAleatorios/app/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/erigom/pmm/FigurasAleatorios/app/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/erigom/pmm/FigurasAleatorios/app/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/res/layout-v21/notification_action.xml"
+    }
+]

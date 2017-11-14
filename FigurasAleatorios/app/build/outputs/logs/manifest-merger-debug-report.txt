@@ -1,0 +1,99 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:3:5-51
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+application
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:5:5-22:19
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/erigom/.android/build-cache/a4b473d9406aa2fb292635b058bab46ce65b0202/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/erigom/.android/build-cache/11a59c077501bb1121aaed3538052c238ce0695c/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/erigom/.android/build-cache/908fffac4fc28c956eb77b7c8316f1fd5409098b/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/erigom/.android/build-cache/8fa7f3f0bf2c83166b3678834b39df76d712e5ca/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/erigom/.android/build-cache/48747f5fc056584ac7417c77260e7f4db95ca5ae/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/erigom/.android/build-cache/1a410a2492e3d18fb9d4756d329fa5c7a302aa5f/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/erigom/.android/build-cache/1f390a823b65243b058c196517c1ee811ed8458e/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/erigom/.android/build-cache/c4c2be2c02078a98ebbb09b8a14e12d055c0dfcd/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/erigom/.android/build-cache/03bb7b0d1d249f084f1e997786964b4abc10c645/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.erigom.figurasaleatorios.DrawingLauncher
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:12:19-50
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.erigom.figurasaleatorios.DrawShapes1
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:19:9-49
+	android:name
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:19:19-46
+activity#com.example.erigom.figurasaleatorios.DrawShapes2
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:20:9-49
+	android:name
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:20:19-46
+activity#com.example.erigom.figurasaleatorios.DrawShapes3
+ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:21:9-58
+	android:name
+		ADDED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml:21:19-46
+uses-sdk
+INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/erigom/.android/build-cache/a4b473d9406aa2fb292635b058bab46ce65b0202/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/erigom/.android/build-cache/11a59c077501bb1121aaed3538052c238ce0695c/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/erigom/.android/build-cache/908fffac4fc28c956eb77b7c8316f1fd5409098b/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/erigom/.android/build-cache/8fa7f3f0bf2c83166b3678834b39df76d712e5ca/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/erigom/.android/build-cache/48747f5fc056584ac7417c77260e7f4db95ca5ae/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/erigom/.android/build-cache/1a410a2492e3d18fb9d4756d329fa5c7a302aa5f/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/erigom/.android/build-cache/1f390a823b65243b058c196517c1ee811ed8458e/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/erigom/.android/build-cache/c4c2be2c02078a98ebbb09b8a14e12d055c0dfcd/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/erigom/.android/build-cache/03bb7b0d1d249f084f1e997786964b4abc10c645/output/AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+		INJECTED from /home/erigom/pmm/FigurasAleatorios/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/erigom/.android/build-cache/a4b473d9406aa2fb292635b058bab46ce65b0202/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/erigom/.android/build-cache/11a59c077501bb1121aaed3538052c238ce0695c/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/erigom/.android/build-cache/908fffac4fc28c956eb77b7c8316f1fd5409098b/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/erigom/.android/build-cache/8fa7f3f0bf2c83166b3678834b39df76d712e5ca/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/erigom/.android/build-cache/48747f5fc056584ac7417c77260e7f4db95ca5ae/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/erigom/.android/build-cache/1a410a2492e3d18fb9d4756d329fa5c7a302aa5f/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/erigom/.android/build-cache/1f390a823b65243b058c196517c1ee811ed8458e/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/erigom/.android/build-cache/c4c2be2c02078a98ebbb09b8a14e12d055c0dfcd/output/AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/erigom/.android/build-cache/aec09620e3ea61b7ab1db2809b52989c2350240c/output/AndroidManifest.xml:26:9-47
