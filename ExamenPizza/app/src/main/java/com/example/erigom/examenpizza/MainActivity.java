@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
         botonCalcular.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                double total = 0 ;
+                double total = 0;
                 double total1 = 0;
                 String box = " ";
                 String sele = " ";

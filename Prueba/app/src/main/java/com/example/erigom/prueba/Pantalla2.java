@@ -42,7 +42,6 @@ public class Pantalla2 extends AppCompatActivity {
         Toast.makeText(this,"onDestroyA2", Toast.LENGTH_SHORT).show();
         super.onDestroy();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

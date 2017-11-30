@@ -32,23 +32,23 @@ public class MainActivity extends AppCompatActivity {
         ListView IstOpciones = (ListView) findViewById(R.id.LstOpciones);
         IstOpciones.setAdapter(adaptador);
 
-        /*IstOpciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        IstOpciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView arg0, View arg1, int position, long id) {
 
             }
 
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
-        });*/
+        });
 
-        IstOpciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*IstOpciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView arg0, View arg1, int position, long id) {
 
                 Intent miIntent1 = new Intent(MainActivity.this, Pantalla2.class);
                 startActivity(miIntent1);
             }
-        });
+        });*/
     }
 
     static class ViewHolder {
