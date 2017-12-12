@@ -10,7 +10,7 @@ public class Grafico {
     private double incX, incY; // Velocidad de desplazamiento
     private int angulo, rotacion;// Ángulo y velocidad rotación
     private int ancho, alto; // Dimensiones de la imagen
-    private int radioColision; // Determinar si chocamos
+    private int radioColision; // Para determinar si chocamos con algún objeto
     // Vista donde dibujamos el gráfico
     private View view;
     // Para determinar el espacio a borrar
@@ -35,14 +35,14 @@ public class Grafico {
                 (int) posY + alto);
         drawable.draw(canvas);
         canvas.restore();
-        //Calculo área donde no podrán solaparse/chocar
+        //Calculamos el área donde no podrán solaparse/chocar
         //otros gráficos con este
         int rInval = (int) distanciaE(0, 0, ancho, alto) / 2 + MAX_VELOCIDAD;
         view.invalidate(x - rInval, y - rInval, x + rInval, y + rInval);
     };
 
-    //Correccion posición si el gráfico sale de la pantalla
-    //En estos casos aparece por el otro lado de la pantalla
+    //Correcciones de posición en caso de que el gráfico se salga de la pantalla
+    //En estos casos aparecemos por el otro lado de la pantalla
     public void incrementaPos() {
         posX += incX;
         // Si salimos de la pantalla, corregimos posición
@@ -68,7 +68,7 @@ public class Grafico {
         return distanciaE(posX, posY, g.posX, g.posY);
     }
 
-    //Nos devuelve si se produce o no colisión
+    //Nos devuelve si se produce o no colisión entre dos objetos
     public boolean verificaColision(Grafico g) {
         return (distancia(g) < (radioColision + g.radioColision));
     }
@@ -77,16 +77,56 @@ public class Grafico {
         return Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2));
     }
 
+    public Drawable getDrawable() {
+        return drawable;
+    }
+
+    public void setDrawable(Drawable drawable) {
+        this.drawable = drawable;
+    }
+
+    public double getPosX() {
+        return posX;
+    }
+
+    public void setPosX(double posX) {
+        this.posX = posX;
+    }
+
+    public double getPosY() {
+        return posY;
+    }
+
+    public void setPosY(double posY) {
+        this.posY = posY;
+    }
+
+    public double getIncX() {
+        return incX;
+    }
+
     public void setIncX(double incX) {
         this.incX = incX;
+    }
+
+    public double getIncY() {
+        return incY;
     }
 
     public void setIncY(double incY) {
         this.incY = incY;
     }
 
+    public int getAngulo() {
+        return angulo;
+    }
+
     public void setAngulo(int angulo) {
         this.angulo = angulo;
+    }
+
+    public int getRotacion() {
+        return rotacion;
     }
 
     public void setRotacion(int rotacion) {
@@ -97,15 +137,36 @@ public class Grafico {
         return ancho;
     }
 
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
+
     public int getAlto() {
         return alto;
     }
 
-    public void setPosX(double posX) {
-        this.posX = posX;
+    public void setAlto(int alto) {
+        this.alto = alto;
     }
 
-    public void setPosY(double posY) {
-        this.posY = posY;
+    public int getRadioColision() {
+        return radioColision;
     }
+
+    public void setRadioColision(int radioColision) {
+        this.radioColision = radioColision;
+    }
+
+    public View getView() {
+        return view;
+    }
+
+    public void setView(View view) {
+        this.view = view;
+    }
+
+    public static int getMaxVelocidad() {
+        return MAX_VELOCIDAD;
+    }
+
 }
