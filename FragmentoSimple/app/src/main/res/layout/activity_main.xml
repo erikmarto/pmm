@@ -1,24 +1,28 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="com.example.erigom.fragmentosimple.MainActivity">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!" />
-
-    <CheckBox
-        android:id="@+id/ch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
-
-    <fragment android:name="com.example.erigom.fragmentosimple.FragmentoEjemplo"
-    android:id="@+id/ejemplo"
-    android:layout_weight="1"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout="@layout/fragment_fragmento_ejemplo"/>
-</LinearLayout>
+    tools:context="com.example.erigom.fragmentosimple.MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <CheckBox
+        android:id="@+id/cBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <fragment
+        android:id="@+id/ejemplo"
+        android:name="com.example.erigom.fragmentosimple.FragmentoEjemplo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout = "@layout/fragment_fragmento_ejemplo"
+        />
+</android.support.constraint.ConstraintLayout>

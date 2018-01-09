@@ -1,7 +1,6 @@
 package com.example.erigom.fragmentodinamico;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
