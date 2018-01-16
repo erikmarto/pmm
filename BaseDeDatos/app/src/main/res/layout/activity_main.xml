@@ -6,20 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.erigom.basededatos.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="133dp" />
+        android:id="@+id/spinner_base_de_datos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </android.support.constraint.ConstraintLayout>
