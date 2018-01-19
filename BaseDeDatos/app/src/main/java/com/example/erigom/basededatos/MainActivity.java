@@ -1,111 +1,143 @@
 package com.example.erigom.basededatos;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
-	Spinner clientesSpinner;
-
+	private Cliente[] datos;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		ClientesSQLiteHelper cliBDh = new ClientesSQLiteHelper(this, "DBClientes", null, 1);
+		//Abrimos la base de datos en modo escritura
+		ClienteSQLite cliBDh = new ClienteSQLite(this, "DBClientes", null, 1);
 
-		SQLiteDatabase db = cliBDh.getWritableDatabase();
+		//Obtenemos referencia a la base de datos para poder modificarla.
+		SQLiteDatabase bd = cliBDh.getWritableDatabase();
 
-		if (db != null) {
-//            for (int cont = 1; cont <= 3; cont++) {
-//                int codigo = cont;
-//                String nombre = "Cliente" + cont;
-//                String telefono = cont + "XXXXXXX";
-//
-//                db.execSQL("INSERT INTO Clientes (codigo, nombre, telefono) "
-//                        + "VALUES ('" + codigo + "', '" + nombre + "', '" + telefono + "')");
-//            }
-//
-//            //Insertar un registro
-//            db.execSQL("INSERT INTO Clientes (nombre, telefono) VALUES ('cli1','11111') ");
-//            //Actualizar un registro
-//            db.execSQL("UPDATE Clientes SET telefono='00000' WHERE nombre='cli1' ");
-//            //Eliminar un registro
-//            db.execSQL("DELETE FROM Clientes WHERE nombre='cli1' ");
-//
-//            //Ejemplo de utilización del método insert()
-//            //Creamos el registro que queremos insertar utilizando un objeto ContentValues
-//            ContentValues nuevoRegistro = new ContentValues();
-//            nuevoRegistro.put("nombre", "cli10");
-//            nuevoRegistro.put("telefono", "101010");
-//            //Insertamos el registro en la base de datos
-//            //El primer parámetro es el nombre de la tabla donde insertaremos.
-//            //El segundo parámetro solo sirve en caso de introducir un registro vacio
-//            //El tercer paráemtro es el objeto ContentValues que contiene el registro a insertar
-//            db.insert("Clientes", null, nuevoRegistro);
-//
-//            //Ejemplo de utilización del método update()
-//            //Establecemos los campos-valores que vamos a actualizar
-//            ContentValues valores = new ContentValues();
-//            valores.put("telefono", "101010XX");
-//
-//            //Actualizamos el registro en la base de datos
-//            //El tercer argumento es la condición del UPDATE tal como lo haríamos en la cláusula
-//            //WHERE en una sentencia SQL normal.
-//            //El cuarto argumento son partes variables de la sentencia SQL que aportamos en un
-//            vector de valores aparte
-//            String[] args = new String[]{"cli1", "cli2"};
-//            db.update("Clientes", valores, "nombre=? OR nombre=?", args);
-//
-//            //Ejemplo de utilización del método delete()
-//            //Eliminamos el registro del cliente 'cli2'
-//            String[] args2 = new String[]{"cli2"};
-//            db.delete("Clientes", "nombre=?", args2);
-//
-//            //Ejemplo Select
-//            String[] args3 = new String[]{"cli1"};
-//            Cursor c = db.rawQuery("SELECT nombre,telefono FROM Clientes WHERE nombre=? ", args3);
-//
-//            //Ejemplo Select2
-			String[] campos = new String[]{"nombre", "telefono"};
-			//String[] args4 = new String[]{"cli1"};
-			Cursor c = db.query("Clientes", campos, null, null, null, null, null);
-			//Cursor c = db.rawQuery("SELECT nombre, telefono FROM Clientes", null);
-			final ArrayList<Cliente> clientes = new ArrayList<>();
+		//En caso de abrir de forma correcta la base de datos
+		//Introducimos 3 clientes de ejemplo
+		//      for (int cont=1; cont<=3; cont++) {
+		//Creamos los datos
+		//           int codigo = cont;
+		//          String nombre = "Cliente" + cont;
+		//          String telefono = cont + "XXXXXXX";
 
-			//Nos aseguramos de que exista al menos un registro
-			if (c.moveToFirst()) {
-				//Recorremos el cursor hasta que no haya más registros
-				do {
-					clientes.add(new Cliente(c.getString(0), c.getString(1)));
-				} while (c.moveToNext());
+		//Introducimos los datos en la tabla Clientes
+		//          bd.execSQL("INSERT INTO Clientes (codigo, nombre, telefono) " +
+		//                  "VALUES (" + codigo + ", '" + nombre + "', '" + telefono + "')");
+		//      }
+		//Ejemplo Select1
+		//   		String[] args3 = new String[]{"cli1"};
+		//   		Cursor c = bd.rawQuery("SELECT nombre,telefono FROM Clientes WHERE nombre=? ", args3);
+
+		//Ejemplo Select2
+		String[] campos = new String[]{"nombre", "telefono"};
+		Cursor c = bd.query("Clientes", campos, null, null, null, null, null);
+		//Nos aseguramos de que exista al menos un registro
+		datos = new Cliente[c.getCount()];
+		int i = 0;
+		if (c.moveToFirst()) {
+			//Recorremos el cursor hasta que no haya mas registros
+			do {
+				String nombreCli = c.getString(0);
+				String telefonoCli = c.getString(1);
+
+				datos[i] = new Cliente(nombreCli, telefonoCli);
+				i++;
+
+			} while (c.moveToNext());
+		}
+
+		bd.close();
+
+		AdaptadorClientes adaptador = new AdaptadorClientes(this);
+		Spinner spinner = findViewById(R.id.spinner);
+		spinner.setAdapter(adaptador);
+
+		spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+				String mensaje = "Nombre: " + datos[i].getNombre() + " Telefono: " + datos[i].getTelf();
+				Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
 			}
 
-			clientesSpinner = findViewById(R.id.spinner_base_de_datos);
-			ClienteAdapter adapter = new ClienteAdapter(this, clientes.toArray(new Cliente[clientes.size()]));
-			clientesSpinner.setAdapter(adapter);
+			@Override
+			public void onNothingSelected(AdapterView<?> adapterView) {
 
-			clientesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-				@Override
-				public void onItemSelected(AdapterView parent, View view, int position, long id) {
-				//	Toast.makeText(MainActivity.this, "Item clicked => " + clientes.get(position), Toast.LENGTH_SHORT).show();
-				}
-
-				@Override
-				public void onNothingSelected(AdapterView<?> parent) {}
-			});
-
-			//Cerramos la base de datos
-			db.close();
-		} //del if
+			}
+		});
+		//Cerramos la base de datos
+		// }
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.menu, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.addcliente:
+				Intent addcliente = new Intent(getApplicationContext(), AddCliente.class);
+				startActivity(addcliente);
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
+
+	public class AdaptadorClientes extends ArrayAdapter {
+		Activity context;
+
+		AdaptadorClientes(Activity context) {
+			super(context, R.layout.activity_cliente_sqlite, datos);
+			this.context = context;
+		}
+
+
+		public View getDropDownView(final int position, View convertview, ViewGroup parent) {
+			View vistadesplegada = getView(position, convertview, parent);
+
+			return vistadesplegada;
+
+		}
+
+		public View getView(int i, View convertView, ViewGroup parent) {
+
+			View item = convertView;
+			if (item == null) {
+
+				LayoutInflater inflater = context.getLayoutInflater();
+				item = inflater.inflate(R.layout.activity_cliente_sqlite, null);
+			}
+			TextView nom = (TextView) item.findViewById(R.id.nombre);
+			nom.setText(datos[i].getNombre());
+
+			TextView subtitulo = (TextView) item.findViewById(R.id.telefono);
+			subtitulo.setText(datos[i].getTelf());
+
+			return item;
+		}
+
+	}//del if
 }

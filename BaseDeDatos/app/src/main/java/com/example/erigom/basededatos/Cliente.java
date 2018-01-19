@@ -1,27 +1,38 @@
 package com.example.erigom.basededatos;
 
-public class Cliente {
-    String nombre;
-    String telefono;
 
-    public Cliente(String nombre, String telefono) {
-        this.nombre = nombre;
-        this.telefono = telefono;
+import java.io.Serializable;
+
+public class Cliente implements Serializable {
+    private String nombre, telf;
+
+
+    public Cliente(String nom, String telefono){
+        nombre=nom;
+        telf=telefono;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public String getTelf() {
+        return telf;
+    }
+
+    public void setTelf(String telf) {
+        this.telf = telf;
+    }
+
+    @Override
+    public String toString() {
+        return "Clientes{" +
+                "nombre='" + nombre + '\'' +
+                ", telf='" + telf + '\'' +
+                '}';
     }
 }
