@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
                 if (info != null) {
                     for (int i = 0; i < info.length; i++) {
                         if (info[i].getState() == NetworkInfo.State.CONNECTED)
-                            Toast.makeText(MainActivity.this, "Conexion a Internet exitosa", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Conexión a Internet exitosa", Toast.LENGTH_SHORT).show();
                     }
 
                 }
             } else
-                Toast.makeText(MainActivity.this, "Fallo en conexiÃ³n a Internet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Fallo en conexión a Internet", Toast.LENGTH_SHORT).show();
         }
 
         protected void onPreExecute() {
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 return (salida);
 
             } catch (Exception e) {
-                salida = "ExcepciÃ³n: " + e.getMessage();
+                salida = "Excepción: " + e.getMessage();
             } finally {
                 httpURLConnection.disconnect();
             }
