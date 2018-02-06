@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final String url = ("http://maps.googleapis.com/maps/api/geocode/json?"
-                        +"latlng="+ latitud.getText().toString() +" ,"
-                        +longitud.getText().toString() +"&sensor=false");
+                        +"latlng="+ longitud.getText().toString() +" ,"
+                        +latitud.getText().toString() +"&sensor=false");
                 new AsyncHttpTask().execute(url);
             }
         });
