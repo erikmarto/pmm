@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         }else
         {
+
             mStackPosition = savedInstanceState.getInt("position");
         }
     }
