@@ -5,30 +5,33 @@
     tools:context="com.example.erik.proyectofinal.AcercaDe">
 
     <ImageView
-        android:id="@+id/imagen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:src="@drawable/logo"
+        android:layout_width="100pt"
+        android:layout_height="100pt"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textView9"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imagen"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="62dp"
-        android:text="Acerca de :" />
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:text="Acerca de:" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textView10"
         android:layout_alignLeft="@+id/textView8"
         android:layout_alignStart="@+id/textView8"
-        android:layout_below="@+id/textView8"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="13dp"
         android:text="Creado por: Erik Martorell Gomez" />
 
     <TextView
@@ -36,9 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView9"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView9"
-        android:layout_below="@+id/textView9"
-        android:layout_marginTop="15dp"
-        android:text="Version 3.0.1" />
+        android:layout_marginBottom="119dp"
+        android:text="Version: 3.0.1" />
 
 </RelativeLayout>

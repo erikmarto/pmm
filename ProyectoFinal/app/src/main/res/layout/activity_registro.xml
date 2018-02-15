@@ -9,19 +9,22 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="91dp"
+        android:text="REGISTRO"
         android:textAlignment="center"
-        android:textSize="80px"
-        android:text="REGISTRO" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="80px" />
 
     <TextView
-        android:text="USUARIO"
+        android:id="@+id/textView"
         android:layout_width="500px"
-        android:textAlignment="center"
-        android:layout_height="wrap_content"
+        android:layout_height="37dp"
         android:layout_gravity="center"
         android:layout_marginTop="20px"
-        android:id="@+id/textView" />
+        android:text="USUARIO"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
 
     <EditText
         android:layout_width="500px"
@@ -33,14 +36,20 @@
         android:hint="Usuario"
         android:id="@+id/registro_usuario" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="58dp" />
+
     <TextView
-        android:text="CONTRASEÑA"
+        android:id="@+id/textView2"
         android:layout_width="500px"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:layout_height="37dp"
         android:layout_gravity="center"
         android:layout_marginTop="10px"
-        android:id="@+id/textView2" />
+        android:text="CONTRASEÑA"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
 
     <EditText
         android:layout_width="500px"
@@ -50,16 +59,34 @@
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:id="@+id/registro_contraseña" />
-    <Button
-        android:layout_width="wrap_content"
-        android:text="REGISTRARSE"
-        android:id="@+id/registro"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_width="wrap_content"
-        android:text="VOLVER"
-        android:id="@+id/volver_login"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/volver_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/registro"
+            android:layout_alignBottom="@+id/registro"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="43dp"
+            android:layout_marginRight="43dp"
+            android:text="VOLVER" />
+
+        <Button
+            android:id="@+id/registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:text="REGISTRARSE" />
+    </RelativeLayout>
 </LinearLayout>

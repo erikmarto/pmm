@@ -7,9 +7,68 @@
     tools:context="com.example.erik.proyectofinal.Aplicacion">
 
     <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:id="@+id/spinner" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
+    <CheckBox
+        android:id="@+id/caja_regalo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/caja_internet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp"
+        android:text="Para Regalo" />
+
+    <CheckBox
+        android:id="@+id/caja_internet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/caja_recoger"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:text="Envio por Internet" />
+
+    <CheckBox
+        android:id="@+id/caja_recoger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radiogroup"
+        android:text="Recoger en Tienda" />
+
+    <Button
+        android:id="@+id/boton_comprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caja_recoger"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="88dp"
+        android:text="COMPRAR" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90pt"
+        android:layout_marginTop="100pt"
+        android:padding="5pt"
+        android:id="@+id/radiogroup">
+
+        <RadioButton
+            android:id="@+id/pago_tarjeta"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Pago en Tarj.Credito" />
+
+        <RadioButton
+            android:id="@+id/pago_efectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pago en Efectivo" />
+
+    </RadioGroup>
 </RelativeLayout>

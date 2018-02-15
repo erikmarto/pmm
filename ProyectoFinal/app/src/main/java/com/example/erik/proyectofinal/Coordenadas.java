@@ -27,8 +27,6 @@ import java.net.URL;
 public class Coordenadas extends AppCompatActivity {
 
     private static final String TAG = "Http Connection";
-    private ListView listView = null;
-    private ArrayAdapter arrayAdapter = null;
     private String direccion;
     private EditText longitud;
     private EditText latitud;
@@ -39,18 +37,18 @@ public class Coordenadas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordenadas);
-        longitud = (EditText)findViewById(R.id.longitud);
-        latitud = (EditText)findViewById(R.id.latitud);
-        boton = (Button)findViewById(R.id.boton);
-        resultado = (TextView)findViewById(R.id.resultado);
+        longitud = (EditText) findViewById(R.id.longitud);
+        latitud = (EditText) findViewById(R.id.latitud);
+        boton = (Button) findViewById(R.id.boton);
+        resultado = (TextView) findViewById(R.id.resultado);
 //
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final String url = ("http://maps.googleapis.com/maps/api/geocode/json?"
-                        +"latlng="+ longitud.getText().toString() +" ,"
-                        +latitud.getText().toString() +"&sensor=false");
+                        + "latlng=" + longitud.getText().toString() + " ,"
+                        + latitud.getText().toString() + "&sensor=false");
                 new AsyncHttpTask().execute(url);
             }
         });
@@ -63,53 +61,40 @@ public class Coordenadas extends AppCompatActivity {
             HttpURLConnection urlConnection = null;
             Integer result = 0;
             try {
-                /* forming th java.net.URL object */
                 URL url = new URL(params[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
-                 /* optional request header */
                 urlConnection.setRequestProperty("Content-Type", "application/json");
-                /* optional request header */
                 urlConnection.setRequestProperty("Accept", "application/json");
-                /* for Get request */
                 urlConnection.setRequestMethod("GET");
                 int statusCode = urlConnection.getResponseCode();
-                /* 200 represents HTTP OK */
-//                if (statusCode ==  200) {
 
                 inputStream = new BufferedInputStream(urlConnection.getInputStream());
                 String response = convertInputStreamToString(inputStream);
                 parseResult(response);
-                result = 1; // Successful
+                result = 1;
 
 
-//                else{
-//                    result = 0; //"Failed to fetch data!";
-//                }
             } catch (Exception e) {
                 Log.d(TAG, e.getLocalizedMessage());
             }
-            return result; //"Failed to fetch data!";
+            return result;
         }
 
         @Override
         protected void onPostExecute(Integer result) {
-            //if(result == 1){
             resultado.setText(direccion);
-            //}else{
-            //  Log.e(TAG, "Failed to fetch data!");
-            //}
         }
     }
 
     private String convertInputStreamToString(InputStream inputStream) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
         String line = "";
         String result = "";
 
-        while((line = bufferedReader.readLine()) != null){
+        while ((line = bufferedReader.readLine()) != null) {
             result += line;
         }
-        if(null!=inputStream){
+        if (null != inputStream) {
             inputStream.close();
         }
         return result;
@@ -117,14 +102,14 @@ public class Coordenadas extends AppCompatActivity {
 
     private void parseResult(String result) {
 
-        try{
+        try {
             JSONObject response = new JSONObject(result);
             JSONArray results = response.optJSONArray("results");
             JSONObject ubicacion = results.getJSONObject(0);
             direccion = ubicacion.getString("formatted_address");
             Toast.makeText(this, direccion, Toast.LENGTH_SHORT).show();
 
-        }catch (JSONException e){
+        } catch (JSONException e) {
             e.printStackTrace();
         }
     }

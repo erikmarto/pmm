@@ -9,32 +9,55 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Introducir la longitud" />
+        android:layout_marginLeft="53pt"
+        android:text="Introducir la longitud"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/longitud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Introducir la latitud" />
+        android:layout_marginLeft="56pt"
+        android:text="Introducir la latitud"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/latitud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/boton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="50pt"
         android:text="Buscar posición" />
 
     <TextView
         android:id="@+id/resultado"
-        android:layout_width="wrap_content"
+        android:layout_width="145dp"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_marginLeft="50pt"
+        android:layout_marginTop="10pt"
+        android:text=""
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="18pt"
+        android:layout_marginTop="5pt"
+        android:src="@drawable/mundo" />
+
+
 </LinearLayout>

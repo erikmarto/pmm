@@ -17,7 +17,6 @@ public class Dibujo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dibujo);
         setContentView(new Dibujar(this));
     }
     //permite dibujar cualquier cosa
